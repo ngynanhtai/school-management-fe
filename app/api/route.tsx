@@ -18,7 +18,7 @@ export async function fetchFilteredEmployee(
   page: number,
   limit: number
 ) {
-  const token = `Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJuZ3V5ZW4uYW5oLXRhaTFAaGRzYWlzb24uY29tLnZuIiwiZ3JvdXAiOiJURUFDSEVSIiwiaWF0IjoxNzAzMjkxMDg5LCJleHAiOjE3MDMyOTY0ODl9.BMnaFId9OCxfwtqZ4ilTCBAp9z3Jl3takjOc_WN2dO18iGPo37behjqTjchPbJQAr_2GAu-lMyxG07-qZ-Ggaw`;
+  const token = `Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJuZ3V5ZW4uYW5oLXRhaTFAaGRzYWlzb24uY29tLnZuIiwiZ3JvdXAiOiJURUFDSEVSIiwiaWF0IjoxNzAzMzIxMzY3LCJleHAiOjE3MDMzMjY3Njd9.ow5zJm7PwA_5YGGmHM6eS_KPez-hQV8SXuCArmoWKsDRCsU21xwSwMd5lTeXsGc9ACcCPQIthPWhTbrHiTMZ4Q`;
   const res = await fetch(
     `${process.env.ROOT_URL}/system/employee?query=${query}&page=${page}&limit=${limit}`,
     {
@@ -30,7 +30,6 @@ export async function fetchFilteredEmployee(
     }
   );
   const response = await res.json();
-  console.log("Response: ", response);
 
   return response.data as Employee[];
 }

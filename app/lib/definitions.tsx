@@ -26,5 +26,6 @@ export type Employee = {
   salary: number;
   roleId: number;
   roleCode: string;
+  roleName: string;
   deleted: boolean;
 };
